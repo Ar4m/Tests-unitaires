@@ -43,9 +43,17 @@ export default class Music extends Component {
   render() {
     console.log(this.state.musics);
 
-    let displayMusic = this.state.filter ? this.state.filterMusics : this.state.musics ;
+    let displayMusic = this.state.filter
+      ? this.state.filterMusics
+      : this.state.musics;
 
-    console.log(displayMusic)
+    let buttons = [];
+
+    for (let i = 0; i < this.state.musics.length; i++) {
+      buttons[i] = this.state.musics[i].genre;
+    }
+
+    var buttonsArr = [...new Set(buttons)];
 
     //const music = this.state.musics && this.state.musics.length > 0;
 
@@ -60,58 +68,30 @@ export default class Music extends Component {
         >
           ALL
         </button>
-        <button
-          style={{ backgroundColor: "black", color: "white" }}
-          onClick={() => {
-            this.setState({
-              filterMusics: this.state.musics.filter((e) => e.genre === "Rap"),
-              filter: true,
-            });
-          }}
-        >
-          Rap
-        </button>
-        <button
-          style={{ backgroundColor: "green", color: "white" }}
-          onClick={() => {
-            this.setState({
-              filterMusics: this.state.musics.filter(
-                (e) => e.genre === "Reggae"
-              ),
-              filter: true,
-            });
-          }}
-        >
-          Reggae
-        </button>
 
-        <button
-          style={{ backgroundColor: "red", color: "white" }}
-          onClick={() => {
-            this.setState({
-              filterMusics: this.state.musics.filter((e) => e.genre === "Rock"),
-              filter: true,
-            });
-          }}
-        >
-          Rock
-        </button>
-
-        <button
-          style={{ backgroundColor: "yellow", color: "black" }}
-          onClick={() => {
-            this.setState({
-              filterMusics: this.state.musics.filter((e) => e.genre === "Jazz"),
-              filter: true,
-            });
-          }}
-        >
-          Jazz
-        </button>
+        {buttonsArr &&
+          buttonsArr.length > 0 &&
+          buttonsArr.map((e, i) => (
+            <button
+              style={{
+                backgroundColor:
+                  (e === "Rap" && "black") || (e === "Reggae" && "green") || (e === "Rock" && "red") || (e === "Jazz" && "yellow") || (e === "Pop" && "skyblue") || "grey",
+                color: e === "Jazz" ? "black" : "white",
+              }}
+              onClick={() => {
+                this.setState({
+                  filterMusics: this.state.musics.filter((x) => x.genre === e),
+                  filter: true,
+                });
+              }}
+            >
+              {e}
+            </button>
+          ))}
 
         <div>
-          {
-            displayMusic && displayMusic.length > 0 &&
+          {displayMusic &&
+            displayMusic.length > 0 &&
             displayMusic.map((e, i) => (
               <div
                 key={i}
@@ -121,7 +101,8 @@ export default class Music extends Component {
                     (e.genre === "Rap" && "10px solid black") ||
                     (e.genre === "Reggae" && "10px solid green") ||
                     (e.genre === "Rock" && "10px solid red") ||
-                    (e.genre === "Jazz" && "10px solid yellow"),
+                    (e.genre === "Jazz" && "10px solid yellow") ||
+                    (e.genre === "Pop" && "10px solid skyblue")
                 }}
               >
                 <p>
