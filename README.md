@@ -10,6 +10,8 @@ Les utilisateurs et genres sont enregistrés dans la base de données mongo.
 
 ![Alt text](Screenshots/listMusic.PNG "Liste de musiques")
 
+![Alt text](Screenshots/createMusic.PNG "Ajouter une musique")
+
 ## Fonctionnement
 
 Pour lancer le projet il faut :  
@@ -17,3 +19,5 @@ Pour lancer le projet il faut :
 - se placer à la racine du projet et lancer la commande __"npm start"__
 
 Pour lancer les tests, il suffit de lancer la commande __"npm run test"__
+
+![Alt text](Screenshots/tests.PNG "Tests")
