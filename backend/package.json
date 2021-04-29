@@ -13,12 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
-    "mongoose": "^5.12.0",
-    "react-datepicker": "^3.8.0"
-=======
     "mongoose": "^5.12.6"
->>>>>>> 1da9e4338b61298a95a57514e73300559e919c48
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
