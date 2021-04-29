@@ -8,7 +8,11 @@ On peut créer afficher supprimer et modifier des morceaux, leur artiste, et les
 
 Les utilisateurs et genres sont enregistrés dans la base de données mongo.
 
+Page d'accueil :
+
 ![Alt text](Screenshots/listMusic.PNG "Liste de musiques")
+
+Ajouter une musique :
 
 ![Alt text](Screenshots/createMusic.PNG "Ajouter une musique")
 
