@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import Button from "./button";
+
 export default class Music extends Component {
   constructor(props) {
     super(props);
@@ -58,6 +60,7 @@ export default class Music extends Component {
 
     return (
       <div className="container-music">
+        <Button label={"click stp"} />
         <button
           onClick={() => {
             this.setState({
