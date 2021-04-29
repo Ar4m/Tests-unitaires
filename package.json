@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@testing-library/jest-dom": "^5.11.4",
-=======
->>>>>>> c633a415fc69fe1d1911a00788c942ef2692a822
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "concurrently": "^6.0.2",
@@ -20,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,17 +39,6 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@testing-library/react": "^11.2.5"
-=======
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13",
-    "@testing-library/dom": "^7.30.4",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
-    "@types/jest": "^26.0.23",
-    "babel-jest": "^26.6.3",
-    "jest": "^26.6.3"
->>>>>>> c633a415fc69fe1d1911a00788c942ef2692a822
   }
 }

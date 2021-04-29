@@ -97,7 +97,7 @@ export default class MusicCreate extends Component {
   render() {
     return (
       <div>
-        <h3>Ajouter une musique</h3>
+        <h3>{this.props.title}</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Nom: </label>
