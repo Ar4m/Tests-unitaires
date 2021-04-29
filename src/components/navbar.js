@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll'
 
 export default class navbar extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/createMusic" className="nav-link" href="#">Ajouter une musique</Link>
+                            <Link to="/createMusic" className="nav-link" href="#"data-testid="lien">{this.props.label}</Link>
                         </li>
                     </ul>
                 </div>

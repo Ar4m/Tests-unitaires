@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import Button from "../components/button";
+import Navbar from "../components/navbar";
 
 import { render, cleanup } from '@testing-library/react'
 import "@testing-library/jest-dom/extend-expect"
@@ -9,11 +9,11 @@ import "@testing-library/jest-dom/extend-expect"
 afterEach(cleanup);
 
 it("render without crashing", () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Button></Button>, div)
+    const div = document.createElement('nav');
+    ReactDOM.render(<Navbar></Navbar>, div)
 })
 
 it("render button correctly", () => {
-    const {getByTestId} = render(<Button label="click me pls"></Button>)
-    expect(getByTestId('button')).toHaveTextContent("click me pls")
+    const {getByTestId} = render(<Navbar label="Partager ta musique"></Navbar>)
+    expect(getByTestId('lien')).toHaveTextContent("Partager ta musique")
 })
